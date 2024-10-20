@@ -6,3 +6,4 @@ En esta carpeta se muestran los pocos proyectos que he realizado entre mi tiempo
 - JAVASCRIPT
 
 Y donde en una parte los proyectos fueron ideas descartadas donde se usarian en algunas paginas de universidades gracias al programa Mexicano llamado: "Sistema Dual"
+Y algunos hechos en mis tiempos libres para un proposito educativo y practico
