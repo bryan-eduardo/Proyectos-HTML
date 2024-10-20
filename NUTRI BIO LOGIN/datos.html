@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriBio Datos Usuario</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <style>
+        html {
+            height: 130%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(#2987a3, #2a6c56);
+        }
+
+        .data-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+        }
+
+        .logo {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .data-box h2 {
+            margin: 0 0 30px;
+            padding: 10px;
+            color: #094a5e;
+            text-align: center;
+        }
+
+        .data-box .user-data,
+        .data-box .user-check {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .data-box .user-data input,
+        .data-box .user-data select,
+        .data-box .user-data textarea {
+            width: 100%;
+            padding: 7px 0;
+            font-size: 15px;
+            color: #000000;
+            outline: none;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .data-box .user-data label,
+        .data-box .user-check label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #000000;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .data-box .user-data input:focus ~ label,
+        .data-box .user-data input:valid ~ label,
+        .data-box .user-data select:focus ~ label,
+        .data-box .user-data select:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #1c788f;
+            font-size: 12px;
+        }
+
+        .data-box .user-data input:focus ~ label,
+        .data-box .user-data select:focus ~ label {
+            color: #1c788f;
+        }
+
+        .data-box .user-data label:hover,
+        .data-box .user-check label:hover {
+            color: #1c788f;
+        }
+
+        .data-box .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .data-box .button-container button {
+            padding: 10px 20px;
+            color: #1c788f;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 1px solid #1c788f;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .data-box .button-container button:hover {
+            background-color: #1c788f;
+            color: #fff;
+        }
+
+        .data-box fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        .data-box fieldset legend {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .data-box .user-check .check-options {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+        }
+
+        .data-box .user-check input[type="radio"] {
+            margin-right: 10px;
+            pointer-events: auto;
+            margin-bottom: 20px;
+        }
+
+        .data-box .user-check label {
+            position: relative;
+            top: auto;
+            left: auto;
+            padding: 0;
+            margin-right: 20px;
+            font-size: 15px;
+            color: #000;
+            pointer-events: auto;
+        }
+
+        .data-box .user-data-checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        .data-box .user-data-checkbox input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            pointer-events: auto;
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .data-box .login-button span:nth-child(3) {
+            bottom: 0;
+            right: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #1c788f);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .data-box .login-button span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #1c788f);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        .check-options {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.user-check {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.data-box p {
+            margin: 0 0 10px;
+            padding: 10px;
+            color: #094a5e;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="data-box">
+        <img src="assets/logofull.png" alt="Nutri Bio Logo" class="logo">
+        <p><strong>Porfavor completa los siguientes campos para calcular tus calorías requeridas (TMB)</strong></p>
+        <form id="user-form">
+            <div class="user-data">
+                <input type="number" id="age" name="age" required>
+                <label for="age">Edad:</label>
+            </div>
+            <div class="user-data">
+                <input type="number" id="weight" name="weight" required>
+                <label for="weight">Peso (kg):</label>
+            </div>
+            <div class="user-data">
+                <input type="number" id="height" name="height" required>
+                <label for="height">Altura (cm):</label>
+            </div>
+
+                <legend>Género:</legend>
+                <div class="check-options">
+                    <label for="male">
+                        <input type="radio" id="male" name="check" value="male" required> Hombre
+                    </label>
+                    <label for="female">
+                        <input type="radio" id="female" name="check" value="female" required> Mujer
+                    </label>
+                </div>
+
+            <div class="user-data">
+                <select id="activity" name="activity" required>
+                    <option value=""></option>
+                    <option value="sedentary">Sedentario (Poco o nada de ejercicio)</option>
+                    <option value="light">Ligera (Ejercicio 1-3 días a la semana)</option>
+                    <option value="moderate">Moderada (Ejercicio 3-5 días a la semana)</option>
+                    <option value="active">Alta (Ejercicio 6-7 días a la semana)</option>
+                    <option value="very-active">Muy Alta (Ejercicio muy duro y trabajo físico)</option>
+                </select>
+                <label for="activity">Nivel de Actividad:</label>
+            </div>
+            <div class="user-check">
+                <legend>¿Eres diabético?</legend>
+                <input type="radio" id="diabetes" name="diabetes" value="si" required>
+                <label for="diabetes">Si</label>
+                <input type="radio" id="diabetes" name="diabetes" value="no" required>
+                <label for="diabetes">No</label>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="login-button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Calcular
+                </button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('user-form');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                // Eliminar el resultado anterior si existe
+                var oldResult = document.getElementById('result');
+                if (oldResult) {
+                    oldResult.remove();
+                }
+
+                var age = parseInt(document.getElementById('age').value);
+                var weight = parseInt(document.getElementById('weight').value);
+                var height = parseInt(document.getElementById('height').value);
+                var gender = document.querySelector('input[name="check"]:checked').value;
+                var activityLevel = document.getElementById('activity').value;
+
+                var calories = 0;
+                if (gender === 'male') {
+                    calories = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+                } else if (gender === 'female') {
+                    calories = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+                }
+
+                switch (activityLevel) {
+                    case 'sedentary':
+                        calories *= 1.2;
+                        break;
+                    case 'light':
+                        calories *= 1.375;
+                        break;
+                    case 'moderate':
+                        calories *= 1.55;
+                        break;
+                    case 'active':
+                        calories *= 1.725;
+                        break;
+                    case 'very-active':
+                        calories *= 1.9;
+                        break;
+                    default:
+                        break;
+                }
+
+                var resultContainer = document.createElement('p');
+                resultContainer.id = 'result';
+                resultContainer.textContent = 'Tus calorías diarias requeridas (TMB) son: ' + Math.round(calories) + ' kcal.';
+                resultContainer.style.color = '#1c788f';
+                resultContainer.style.textAlign = 'center';
+                resultContainer.style.marginTop = '20px';
+                resultContainer.style.fontFamily = 'Arial, sans-serif';
+                resultContainer.style.fontWeight = 'bold'; 
+                resultContainer.style.fontSize = '18px';
+                form.appendChild(resultContainer);
+            });
+        });
+    </script>
+</body>
+</html>

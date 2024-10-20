@@ -1,0 +1,50 @@
+body{
+    background-image: linear-gradient(pink ,white);
+
+    width: auto;
+    height: auto;
+    text-align: justify;
+}
+
+.father{
+    display: flex;
+    justify-content: center;
+}
+
+.div-1{
+    background-color: beige;
+
+    font-family: Roboto;
+
+    width: 350px;
+    padding: 35px;
+}
+
+.div-2{
+    width: 150px;
+    padding: 35px;
+    margin-left: 20px;
+}
+
+.father-2 .text-2{
+    font-family: Roboto;
+
+    background-color: antiquewhite;
+
+    text-align: center;
+    margin: 55px;
+}
+
+.father-2 .img-2{
+
+    text-align: center;
+    border: 15px;
+}
+
+.text{
+    background-color: bisque;
+
+    font-family: Roboto;
+
+    text-align: center;
+}

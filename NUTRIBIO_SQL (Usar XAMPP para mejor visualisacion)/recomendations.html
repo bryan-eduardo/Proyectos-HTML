@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información Nutricional y Recomendaciones para Diabéticos</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(#2987a3, #2a6c56);
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #9cd9ec;
+            color: white;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header img {
+            height: 50px;
+        }
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #105063;
+            text-decoration: none;
+            margin: 0 20px;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+        nav a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 48%;
+            display: flex;
+            align-items: center;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        .section img {
+            width: 200px;
+            height: auto;
+            display: block;
+            flex-shrink: 0; /* Para que la imagen no se redimensione */
+        }
+        .section-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .section h2 {
+            margin: 0;
+            padding: 10px;
+            background-color: #2a6c56;
+            color: white;
+            font-size: 1.5em;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .section h2:hover {
+            background-color: #105063;
+        }
+        .section p, .section ul, .section h3 {
+            padding: 10px;
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+            transition: color 0.3s ease-in-out;
+        }
+        .section p:hover, .section ul:hover, .section h3:hover {
+            color: #105063;
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+            font-family: 'Arial', sans-serif;
+            color: #105063;
+        }
+        .section ul li ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .section h3 {
+            font-family: 'Arial', sans-serif;
+            color: #2a6c56;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        .section h3:hover {
+            color: #105063;
+        }
+        .section u {
+            text-decoration: underline;
+            color: #2a6c56;
+            transition: color 0.3s ease-in-out;
+        }
+        .section u:hover {
+            color: #105063;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+        <nav>
+            <a href="home.php">Home</a>
+            <a href="datos.html">TMB</a>
+            <a href="menu.html">Menú</a>
+            <a href="recomendations.html">Recomendaciones Alimenticias</a>
+            <a href="index.php">Salir</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <img src="assets/tmb.jpg" alt="Imagen TMB">
+            <div class="section-content">
+                <h2>Tasa Metabólica Basal (TMB)</h2>
+                <p>La Tasa Metabólica Basal (TMB) es la cantidad mínima de energía que necesita tu cuerpo para mantener funciones vitales mientras estás en reposo.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <img src="assets/sugar.jpg" alt="Imagen Azúcar en la Sangre">
+            <div class="section-content">
+                <h2>Índices de Azúcar en la Sangre</h2>
+                <p>Los índices de azúcar en la sangre se refieren a los niveles de glucosa (azúcar) presentes en el torrente sanguíneo. Los dos principales son:</p>
+                <ul>
+                    <li>Glucosa en ayunas</li>
+                    <li>Glucosa postprandial</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <img src="assets/micronutrients.jpg" alt="Imagen Micronutrientes">
+            <div class="section-content">
+                <h2>Micronutrientes</h2>
+                <p>Los micronutrientes son nutrientes esenciales que el cuerpo necesita en pequeñas cantidades para funcionar correctamente.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <img src="assets/macronutrients.jpg" alt="Imagen Macronutrientes">
+            <div class="section-content">
+                <h2>Macronutrientes</h2>
+                <p>Los macronutrientes son nutrientes que el cuerpo necesita en grandes cantidades para proporcionar energía y sostener las funciones metabólicas. Incluyen:</p>
+                <ul>
+                    <li>Proteínas</li>
+                    <li>Carbohidratos</li>
+                    <li>Grasas</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <img src="assets/proteins.jpg" alt="Imagen Proteínas">
+            <div class="section-content">
+                <h2>Proteínas</h2>
+                <p>Las proteínas son macromoléculas formadas por cadenas lineales de aminoácidos. Son fundamentales para múltiples funciones corporales.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <img src="assets/carbs.jpg" alt="Imagen Carbohidratos">
+            <div class="section-content">
+                <h2>Carbohidratos</h2>
+                <p>Los carbohidratos son la principal fuente de energía para el cuerpo humano. Se clasifican en simples y complejos.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <img src="assets/recommendations.jpg" alt="Imagen Recomendaciones para Diabéticos">
+            <div class="section-content">
+                <h2>Recomendaciones para Diabéticos</h2>
+                <ul>
+                    <li>Controlar la dieta</li>
+                    <li>Monitorear los niveles de glucosa</li>
+                    <li>Mantenerse activo físicamente</li>
+                    <li>Seguir el tratamiento médico adecuado</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style/styles.css">
+</head>
+<style>
+	input[type=button],input[type=submit]
+
+
+
+
+
+{
+background-color: white;
+border: none;
+color:black;
+font-weight: bold;
+padding: 6px 20px;
+text-align: center;
+font-size:16px;
+margin: 4px 4px;
+box-shadow: 3px 3px 3px black;
+position: center;
+font-family: Arial;
+}
+
+input[type="text"]
+{
+font-family: Arial;
+color:black;
+background-color:white;
+padding:4px;
+text-align: left;
+font-size: 16px;
+margin: 4px 4px;
+box-shadow: 2px 2px 2px black;
+}
+
+body
+{
+background-color: #338DFF;
+}
+
+label
+{
+font-family: Arial;
+padding: 4px;
+font-weight: bold;
+color: black;
+text-align: center;
+align:center;
+font-size: 18px;
+}
+
+table
+{
+background-color: #F0EFEF;
+padding: 5px 5px;
+}
+
+td
+{
+padding: 6px 4px;
+}
+
+</style>
+
+
+<!-- LA LINEA 12 A LA 65 ESTA DEDICADA A DAR LOS ESTILOS PARA LA PAGINA -->
+
+
+
+
+
+
+
+
+
+
+<!-- LA LINEA 83 A 130 ESTAN ORIENTADA A TODO EL FORMULARIO QUE SE MUESTRA EN LA PAGINA -->
+
+<body>
+<center>
+<form name="Mantenimiento" action="mantenimiento.php" method="post">
+<table border="1">
+
+<tr>
+<td colspan="4"><label>Mantenimiento de Clientes</label></td>
+</tr>
+
+<tr><td colspan="4"><label>Registrar Cliente </label></td></tr>
+<tr>
+	<td><label>Codigo</label></td><td><input type="text" value="" maxlength="7" name="txtcodigo"></td>
+	<td><label>Nombre de la empresa</label></td><td><input type="text" value="" maxlength="10" name="txtnombreEmpresa" maxlength="2" size="10"></td>
+	<td><label>Puesto en la empresa</label></td><td><input type="text" value="" maxlength="10" name="txtpuestoEmpresa"></td>
+	<td><label>Razon social</label></td><td><input type="text" value="" maxlength="50" size="10" name="txtrazon"></td>
+	<td><label>Telefono</label></td><td><input type="text" value="" maxlength="10" name="txtTelefono"></td>
+	<td><label>Calle y numero</label></td><td><input type="text" value="" maxlength="9" size="10" name="txtcalle"></td>
+</tr>
+<tr>
+	<td><label>Colonia o alcaldia</label></td><td><input type="text" value="" maxlength="10" name="txtcolonia"></td>
+	<td><label>Codigo postal</label></td><td><input type="text" value="" maxlength="9" size="10" name="txtcodigopostal"></td>
+	<td><label>Localidad o estado</label></td><td><input type="text" value="" maxlength="10" name="txtlocalidad"></td>
+</tr>
+
+<tr><td colspan="4" align="center">
+<input type="submit" value="Nuevo" name="limpiardatos" >
+<input type="submit" value="Grabar" name="grabardatos" >
+<input type="submit" value="Modificar" name="modificardatos" >
+<input type="submit" value="Eliminar" name="eliminardatos">
+<input type="submit" value="Editar imagen" name="editarimagen">
+</td>
+</tr>
+
+<tr><td colspan="4"><label>Listado de Clientes </label></td></tr>
+
+<tr>
+	
+	<td><label>Codigo</label></td>
+	<td><label>Nombre de la empresa</label></td>
+	<td><label>Puesto en la empresa</label></td>
+	<td><label>Razon social</label></td>
+	<td><label>Telefono</label></td>
+	<td><label>Calle y numero</label></td>
+	<td><label>Codigo postal</label></td>
+	<td><label>Colonia y numero</label></td>
+	<td><label>Localidad o estado</label></td>
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php 
+$sql="SELECT * FROM clientes";
+$result=mysqli_query($conn,$sql);
+
+while($mostrar=mysqli_fetch_array($result))
+{
+?>
+<tr>
+	
+	<td><?php echo $mostrar['codigo'] ?>
+	<td><?php echo $mostrar['nombre_contacto'] ?>
+	<td><?php echo $mostrar['puesto_empresa'] ?>
+	<td><?php echo $mostrar['razon_social'] ?>
+	<td><?php echo $mostrar['telefono'] ?>
+	<td><?php echo $mostrar['calle_numero'] ?>
+	<td><?php echo $mostrar['colonia_alcaldia'] ?>
+	<td><?php echo $mostrar['codigo_postal'] ?>
+	<td><?php echo $mostrar['localidad_estado'] ?>
+
+</tr>
+<?php
+}
+
+?>
+
+
+
+
+
+
+
+
+
+
+</table>
+</form>
+</center>
+</body>
+</html>

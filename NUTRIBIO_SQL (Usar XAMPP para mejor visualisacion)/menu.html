@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Ceviche</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+       /* LE METI OTROS CSS PORQUE LOS OCUPABA AQUI, LUEGO LO METO AL ARCHIVO DE STYLES
+       YA SOLO TIENES QUE PONER LA RECETA DE CADA UNO EN EL APARTADO DE PREPARACIÓN
+       Y COLOCAR LAS IMAGENES WE, FUE UN PEDO LA NETA XD      
+       */
+        .recipe {
+            display: none; 
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300px; 
+            box-shadow: 0 0 10px rgba(255, 6, 6, 0.1); 
+        }
+    
+        .show-recipe .recipe {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="assets/logo.png" alt="Logo">
+    <nav>
+        <a href="home.php">Home</a>
+        <a href="datos.html">TMB</a>
+        <a href="menu.html">Menú</a>
+        <a href="recomendations.html">Recomendaciones Alimenticias</a>
+        <a href="index.php">Salir</a>
+        
+    </nav>
+</header>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card_landing" style="--i:url(img.jpg)">
+            <h6>Ceviche</h6>
+        </div>
+        <div class="card_info">
+            <div class="head">
+                <p class="title">Ceviche</p>
+                <div class="description">
+                    <div class="item">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>40 min</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-regular fa-user"></i>
+                        <p>4</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-fire"></i>
+                        <p>1000 kcal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <p class="title">Ingredientes:</p>
+                <ul class="list">
+                    <li>1 kilogramo de pescado</li>
+                    <li>1 cebolla cortada en julianas</li>
+                    <li>1 taza de caldo de pescado</li>
+                    <li>1 pizca de sal y pimienta</li>
+                    <li>10 limones</li>
+                    <li>1 ají amarillo picado</li>
+                </ul>
+            </div>
+            <div class="action">
+                <a href="#" class="btn">Ver receta</a>
+                <div class="recipe">
+                    <p><strong>Preparación:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card_landing" style="--i:url(img.jpg)">
+                <h6>Ceviche</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Ceviche</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>40 min</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            <p>4</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-fire"></i>
+                            <p>1000 kcal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 kilogramo de pescado</li>
+                        <li>1 cebolla cortada en julianas</li>
+                        <li>1 taza de caldo de pescado</li>
+                        <li>1 pizca de sal y pimienta</li>
+                        <li>10 limones</li>
+                        <li>1 ají amarillo picado</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn">Ver receta</a>
+                    <div class="recipe">
+                        <p><strong>Preparación:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card_landing" style="--i:url(img.jpg)">
+                <h6>Ceviche</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Ceviche</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>40 min</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            <p>4</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-fire"></i>
+                            <p>1000 kcal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 kilogramo de pescado</li>
+                        <li>1 cebolla cortada en julianas</li>
+                        <li>1 taza de caldo de pescado</li>
+                        <li>1 pizca de sal y pimienta</li>
+                        <li>10 limones</li>
+                        <li>1 ají amarillo picado</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn">Ver receta</a>
+                    <div class="recipe">
+                        <p><strong>Preparación:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="card_landing" style="--i:url(img.jpg)">
+                <h6>Ceviche</h6>
+            </div>
+            <div class="card_info">
+                <div class="head">
+                    <p class="title">Ceviche</p>
+                    <div class="description">
+                        <div class="item">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>40 min</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-regular fa-user"></i>
+                            <p>4</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa-solid fa-fire"></i>
+                            <p>1000 kcal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p class="title">Ingredientes:</p>
+                    <ul class="list">
+                        <li>1 kilogramo de pescado</li>
+                        <li>1 cebolla cortada en julianas</li>
+                        <li>1 taza de caldo de pescado</li>
+                        <li>1 pizca de sal y pimienta</li>
+                        <li>10 limones</li>
+                        <li>1 ají amarillo picado</li>
+                    </ul>
+                </div>
+                <div class="action">
+                    <a href="#" class="btn">Ver receta</a>
+                    <div class="recipe">
+                        <p><strong>Preparación:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+    
+<script>
+  
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function(event) {
+
+            event.preventDefault();
+            const card = this.closest('.card');
+            card.classList.toggle('show-recipe');
+
+            if (card.classList.contains('show-recipe')) {
+                this.textContent = 'Ocultar receta';
+            } else {
+                this.textContent = 'Ver receta';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
